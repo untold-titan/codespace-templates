@@ -1,8 +1,10 @@
-FROM ubuntu
+FROM fedora:latest
 
-RUN apt-get update
-RUN apt-get install -y curl git unzip snapd
-RUN systemctl start snapd
-RUN systemctl status snapd
-RUN snap install flutter --classic
-RUN flutter doctor
+# RUN dnf update -y
+RUN curl -o flutter.tar https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.3.10-stable.tar.xz
+RUN ls
+RUN tar -xf /flutter.tar 
+RUN ls
+
+
+ENV PATH /flutter/bin/:$PATH
