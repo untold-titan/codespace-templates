@@ -1,0 +1,6 @@
+{
+    "name":"Flutter",
+    "build":{
+        "dockerfile": "Dockerfile"
+    }
+}
